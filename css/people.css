@@ -1,0 +1,197 @@
+/* ================================================
+   PEOPLE PAGE CUSTOM STYLES for Hugo Ananke Theme
+   ================================================ */
+
+/* --- Hide unwanted navigation or Hugo auto blocks --- */
+.wiki-navigation,
+.pagination,
+.post-nav,
+#TableOfContents {
+  display: none !important;
+}
+
+/* ================================================
+   GRID LAYOUT
+   ================================================ */
+
+/* General flexbox row wrapper for all people sections */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px; /* spacing between cards */
+  margin-bottom: 2rem;
+}
+
+/* Each person card occupies one-third of a row on desktop */
+.col-md-4 {
+  flex: 0 0 calc(33.333% - 32px);
+  max-width: calc(33.333% - 32px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Tablet view: 2 people per row */
+@media (max-width: 992px) {
+  .col-md-4 {
+    flex: 0 0 calc(50% - 24px);
+    max-width: calc(50% - 24px);
+  }
+}
+
+/* Mobile view: 1 person per row */
+@media (max-width: 600px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* ================================================
+   INDIVIDUAL PERSON CARD
+   ================================================ */
+
+/* Card container */
+.our-team {
+  background-color: transparent;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+
+.our-team:hover {
+  transform: translateY(-5px);
+}
+
+/* Image wrapper (circular frame) */
+.pic {
+  position: relative;
+  overflow: hidden;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Profile photo inside circular frame */
+.pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Slight zoom on hover */
+.our-team:hover .pic img {
+  transform: scale(1.05);
+}
+
+/* Name text below photo */
+.title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+  color: #000;
+}
+
+/* Role or position */
+.role {
+  display: block;
+  color: #0077ff;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Optional short description (e.g., “Class of 2023”) */
+.desc {
+  display: block;
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+/* Section headings (e.g., Head Officers, Officers) */
+h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+/* ================================================
+   HERO SECTION (top black banner area)
+   ================================================ */
+
+/* Center the hero title vertically and horizontally */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center !important;
+  height: 60vh; /* Adjust hero height as needed */
+  background-color: #000; /* Ensure background consistency */
+  color: #ddd;
+}
+
+/* Subtitle (e.g., EECS 106A Project Showcase) */
+.hero .title {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #eee;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* Main hero heading (e.g., About Us) */
+.hero h1 {
+  text-align: center !important;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 400;
+  color: #aaa;
+  line-height: 1.1;
+  margin: 0 auto;
+}
+
+/* ================================================
+   CONTENT TITLES INSIDE PAGE BODY
+   ================================================ */
+
+/* Keep inner content titles left-aligned */
+.content h1,
+.content h2 {
+  text-align: left;
+  color: #000;
+  font-weight: 700;
+}
+
+/* ================================================
+   DARK MODE (optional)
+   ================================================ */
+@media (prefers-color-scheme: dark) {
+  .title {
+    color: #f0f0f0;
+  }
+
+  .role {
+    color: #5aa9ff;
+  }
+
+  h3 {
+    color: #f0f0f0;
+  }
+
+  .desc {
+    color: #aaa;
+  }
+
+  .hero {
+    background-color: #000;
+    color: #ccc;
+  }
+}
