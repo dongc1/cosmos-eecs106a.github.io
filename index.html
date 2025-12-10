@@ -8,10 +8,10 @@
 <meta name="robots" content="index, follow">
 <title>EECS 106A Project Showcase</title>
 
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="description" content="UC Berkeley EECS 106A Introduction to Robotics - Student Project Showcase">
+<meta name="author" content="EECS 106A Students">
 <link rel="canonical" href="https://dongc1.github.io/cosmos-eecs106a.github.io/">
-<link crossorigin="anonymous" href="/cosmos-eecs106a.github.io/assets/css/stylesheet.d0049500090a8b5b522a30f4bc70f815df41595125d25503dff47281216974cb.css" integrity="sha256-0ASVAAkKi1tSKjD0vHD4Fd9BWVEl0lUD3/RygSFpdMs=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/cosmos-eecs106a.github.io/assets/css/stylesheet.40280c47ff06b39aa7b2d4e5b2d99d2d7e5868aafe19014ed21dbf8ab135f25d.css" integrity="sha256-QCgMR/8Gs5qnstTlstmdLX5YaKr&#43;GQFO0h2/irE18l0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://dongc1.github.io/cosmos-eecs106a.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://dongc1.github.io/cosmos-eecs106a.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://dongc1.github.io/cosmos-eecs106a.github.io/favicon-32x32.png">
@@ -20,6 +20,7 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" type="application/rss+xml" href="https://dongc1.github.io/cosmos-eecs106a.github.io/index.xml" title="rss">
+<link rel="alternate" type="application/json" href="https://dongc1.github.io/cosmos-eecs106a.github.io/index.json" title="json">
 <link rel="alternate" hreflang="en" href="https://dongc1.github.io/cosmos-eecs106a.github.io/">
 <noscript>
     <style>
@@ -32,16 +33,13 @@
 </noscript><meta property="og:url" content="https://dongc1.github.io/cosmos-eecs106a.github.io/">
   <meta property="og:site_name" content="EECS 106A Project Showcase">
   <meta property="og:title" content="EECS 106A Project Showcase">
-  <meta property="og:description" content="Welcome to the project gallery for UC Berkeley’s EECS 106A: Introduction to Robotics! Here you can explore student projects showcasing mobile robots, manipulators, and autonomous systems.
-🎥 Featured Demo Example student project: TurtleBot3 Autonomous Patrol
-🚀 Project Gallery 🟢 UR5e Cube Grasp Team: Alice, Bob, Carol
-Grasps a colored cube using forward kinematics and visual feedback from RealSense.
-View Details →">
+  <meta property="og:description" content=" ArUco Marker Tracking
+for Drone Control EECS 106/206A Final Project — Vision-based autonomous drone navigation using ArUco markers and ROS2">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="EECS 106A Project Showcase">
-<meta name="twitter:description" content="">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="UC Berkeley EECS 106A Introduction to Robotics - Student Project Showcase">
 
 <script type="application/ld+json">
 {
@@ -49,7 +47,7 @@ View Details →">
   "@type": "Organization",
   "name": "EECS 106A Project Showcase",
   "url": "https://dongc1.github.io/cosmos-eecs106a.github.io/",
-  "description": "",
+  "description": "UC Berkeley EECS 106A Introduction to Robotics - Student Project Showcase",
   "logo": "https://dongc1.github.io/cosmos-eecs106a.github.io/favicon.ico",
   "sameAs": [
       
@@ -69,6 +67,31 @@ View Details →">
         </div>
         <ul id="menu">
             <li>
+                <a href="https://dongc1.github.io/cosmos-eecs106a.github.io/" title="Home">
+                    <span class="active">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dongc1.github.io/cosmos-eecs106a.github.io/#overview" title="Overview">
+                    <span>Overview</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dongc1.github.io/cosmos-eecs106a.github.io/#architecture" title="Architecture">
+                    <span>Architecture</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dongc1.github.io/cosmos-eecs106a.github.io/#implementation" title="Implementation">
+                    <span>Implementation</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dongc1.github.io/cosmos-eecs106a.github.io/#demo" title="Demo">
+                    <span>Demo</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://dongc1.github.io/cosmos-eecs106a.github.io/about/" title="About">
                     <span>About</span>
                 </a>
@@ -77,99 +100,285 @@ View Details →">
     </nav>
 </header>
 <main class="main"> 
-<div class="post-content"><p>Welcome to the project gallery for UC Berkeley’s EECS 106A: Introduction to Robotics!  Here you can explore student projects showcasing <strong>mobile robots</strong>, <strong>manipulators</strong>, and <strong>autonomous systems</strong>.</p>
-<hr>
-<h2 id="-featured-demo">🎥 Featured Demo<a hidden class="anchor" aria-hidden="true" href="#-featured-demo">#</a></h2>
-<div align="center">
-<iframe width="800" height="450"
-src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-title="EECS 106A Project Demo"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen></iframe>
+<div class="post-content"><style>
+.hero-section { position: relative; width: 100vw; height: 100vh; margin-left: -50vw; left: 50%; margin-top: -56px; overflow: hidden; }
+.hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(50%); }
+.hero-content { position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 0 24px; }
+.hero-title { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 24px; line-height: 1.1; }
+.hero-subtitle { font-size: clamp(1rem, 2vw, 1.5rem); font-weight: 400; color: rgba(255, 255, 255, 0.9); margin-bottom: 40px; max-width: 800px; }
+.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+.scroll-indicator { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); color: white; opacity: 0.8; font-size: 0.875rem; font-weight: 500; text-align: center; }
+.scroll-arrow { font-size: 1.5rem; animation: bounce 2s infinite; display: block; margin-top: 8px; }
+.content-section { padding: 100px 24px; max-width: 1100px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 60px; }
+.section-tag { display: inline-block; background: #E7F3FF; color: #0668E1; padding: 8px 20px; border-radius: 24px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 20px; }
+.section-title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px; color: #1C1E21; }
+.section-description { font-size: 1.125rem; color: #65676B; max-width: 700px; margin: 0 auto; line-height: 1.7; }
+.workflow-section { background: #F8F9FA; padding: 100px 24px; margin-top: 60px; }
+.workflow-container { max-width: 1100px; margin: 0 auto; }
+.workflow-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 48px; }
+.workflow-card { background: white; border-radius: 16px; padding: 32px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; }
+.workflow-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); }
+.workflow-icon { font-size: 3rem; margin-bottom: 16px; }
+.workflow-title { font-size: 1.5rem; font-weight: 700; color: #1C1E21; margin-bottom: 16px; }
+.workflow-content { color: #65676B; font-size: 0.9375rem; line-height: 1.6; }
+.workflow-list { list-style: none; padding: 0; margin: 16px 0 0 0; }
+.workflow-list li { padding: 8px 0; color: #1C1E21; font-size: 0.9375rem; }
+.workflow-list li:before { content: "→ "; color: #0668E1; font-weight: 700; margin-right: 8px; }
+.highlight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px; }
+.highlight-card { background: white; border: 2px solid #E4E6EB; border-radius: 12px; padding: 24px; text-align: center; }
+.highlight-value { font-size: 2.5rem; font-weight: 800; color: #0668E1; line-height: 1; margin-bottom: 8px; }
+.highlight-label { font-size: 1rem; color: #65676B; font-weight: 500; }
+.demo-section { padding: 100px 24px; max-width: 1000px; margin: 0 auto; }
+.video-container { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12); margin-top: 40px; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+@media (max-width: 768px) {
+  .content-section, .workflow-section, .demo-section { padding: 60px 20px; }
+}
+</style>
+<div class="hero-section">
+<video class="hero-video" autoplay muted loop playsinline><source src="vedio/hero.mp4" type="video/mp4"></video>
+<div class="hero-content">
+<h1 class="hero-title">ArUco Marker Tracking<br>for Drone Control</h1>
+<p class="hero-subtitle">EECS 106/206A Final Project — Vision-based autonomous drone navigation using ArUco markers and ROS2</p>
+<div class="hero-buttons">
+<a href="#overview" class="btn">Learn More</a>
+<a href="#demo" class="btn btn-outline">Watch Demo</a>
 </div>
-<p align="center"><em>Example student project: TurtleBot3 Autonomous Patrol</em></p>
-<hr>
-<h2 id="-project-gallery">🚀 Project Gallery<a hidden class="anchor" aria-hidden="true" href="#-project-gallery">#</a></h2>
-<h3 id="-ur5e-cube-grasp">🟢 UR5e Cube Grasp<a hidden class="anchor" aria-hidden="true" href="#-ur5e-cube-grasp">#</a></h3>
-<p><strong>Team:</strong> Alice, Bob, Carol<br>
-Grasps a colored cube using forward kinematics and visual feedback from RealSense.</p>
-<p><a href="http://localhost:1313/cosmos-eecs106a.github.io/posts/hello-world/">View Details →</a></p>
+</div>
+<div class="scroll-indicator">
+<div>Scroll to explore</div>
+<span class="scroll-arrow">↓</span>
+</div>
+</div>
+<div id="overview" class="content-section">
+<div class="section-header">
+<span class="section-tag">PROJECT OVERVIEW</span>
+<h2 class="section-title">Vision-Based Drone Control</h2>
+<p class="section-description">We developed an autonomous drone system that tracks and follows ArUco markers using computer vision, ROS2, and custom control algorithms. The system achieves real-time marker detection and smooth trajectory planning.</p>
+</div>
+<div class="highlight-grid">
+<div class="highlight-card">
+<div class="highlight-value">30Hz</div>
+<div class="highlight-label">Detection Rate</div>
+</div>
+<div class="highlight-card">
+<div class="highlight-value">±2mm</div>
+<div class="highlight-label">Positioning Accuracy</div>
+</div>
+<div class="highlight-card">
+<div class="highlight-value">95%</div>
+<div class="highlight-label">Tracking Success</div>
+</div>
+</div>
+</div>
+<div id="architecture" class="workflow-section">
+<div class="workflow-container">
+<div class="section-header">
+<span class="section-tag">SYSTEM ARCHITECTURE</span>
+<h2 class="section-title">Three-Stage Pipeline</h2>
+<p class="section-description">Our system uses a modular architecture with three main components: Perception, Planning, and Control</p>
+</div>
+<div class="workflow-grid">
+<div class="workflow-card">
+<div class="workflow-icon">📷</div>
+<h3 class="workflow-title">Perception</h3>
+<div class="workflow-content">
+<p><strong>ArUco Detection Node</strong></p>
+<ul class="workflow-list">
+<li>Subscribe: <code>/arducam/image_raw</code></li>
+<li>Process: <code>cv2.aruco</code> detection</li>
+<li>Detect 4 corners + center</li>
+<li>Publish: <code>/aruco_detector/marker_pixel</code></li>
+</ul>
+</div>
+</div>
+<div class="workflow-card">
+<div class="workflow-icon">🎯</div>
+<h3 class="workflow-title">Planning</h3>
+<div class="workflow-content">
+<p><strong>Velocity Computation</strong></p>
+<ul class="workflow-list">
+<li>Calculate pixel x/y error</li>
+<li>Error = marker_center - image_center</li>
+<li>Compute v_y, v_z (v_x = 0)</li>
+<li>Publish: <code>/desired_pose</code></li>
+</ul>
+</div>
+</div>
+<div class="workflow-card">
+<div class="workflow-icon">🎮</div>
+<h3 class="workflow-title">Control</h3>
+<div class="workflow-content">
+<p><strong>RC Command Mapping</strong></p>
+<ul class="workflow-list">
+<li>Map velocity → RC commands</li>
+<li>[roll, pitch, throttle, yaw]</li>
+<li>Range: 1000-2000 (neutral: 1500)</li>
+<li>Publish: <code>/rc/override</code></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="implementation" class="content-section">
+<div class="section-header">
+<span class="section-tag">IMPLEMENTATION</span>
+<h2 class="section-title">Technical Approach</h2>
+</div>
+<div class="workflow-grid">
+<div class="workflow-card">
+<div class="workflow-icon">🔧</div>
+<h3 class="workflow-title">Hardware</h3>
+<div class="workflow-content">
+<ul class="workflow-list">
+<li>ArduCam camera module</li>
+<li>Betaflight flight controller</li>
+<li>Custom drone frame</li>
+<li>Onboard IMU sensors</li>
+</ul>
+</div>
+</div>
+<div class="workflow-card">
+<div class="workflow-icon">⚙️</div>
+<h3 class="workflow-title">Calibration</h3>
+<div class="workflow-content">
+<p><strong>Kalibr & Allan Variance</strong></p>
+<ul class="workflow-list">
+<li>Pinhole camera model</li>
+<li>Intrinsics matrix K</li>
+<li>Distortion parameters</li>
+<li>Camera-IMU extrinsics</li>
+</ul>
+</div>
+</div>
+<div class="workflow-card">
+<div class="workflow-icon">📐</div>
+<h3 class="workflow-title">Control Algorithm</h3>
+<div class="workflow-content">
+<p><strong>PID-based velocity control</strong></p>
+<ul class="workflow-list">
+<li>Z_vel = gain × y_error</li>
+<li>Y_vel = gain × x_error</li>
+<li>X_vel = 0 (hover mode)</li>
+<li>RC_yaw = 1500 + gain × v_y</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="workflow-section">
+<div class="workflow-container">
+<div class="section-header">
+<span class="section-tag">OPTIMIZATION</span>
+<h2 class="section-title">Three-Phase Improvement</h2>
+<p class="section-description">We iteratively refined our control system to minimize overshoot and improve tracking stability</p>
+</div>
+<div class="workflow-grid">
+<div class="workflow-card">
+<div class="workflow-icon">🎯</div>
+<h3 class="workflow-title">Phase 1</h3>
+<div class="workflow-content">
+<p><strong>Target Acquisition</strong></p>
+<p>Initial marker detection and approach. Aggressive gains for fast response.</p>
+</div>
+</div>
+<div class="workflow-card">
+<div class="workflow-icon">📊</div>
+<h3 class="workflow-title">Phase 2</h3>
+<div class="workflow-content">
+<p><strong>Parameter Optimization</strong></p>
+<p>Tune PID gains to reduce overshoot and oscillation during transient.</p>
+</div>
+</div>
+<div class="workflow-card">
+<div class="workflow-icon">✅</div>
+<h3 class="workflow-title">Phase 3</h3>
+<div class="workflow-content">
+<p><strong>Target Tracking</strong></p>
+<p>Stable hovering with smooth tracking. Low gains for minimal jitter.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="demo" class="demo-section">
+<div class="section-header">
+<span class="section-tag">DEMONSTRATION</span>
+<h2 class="section-title">See It In Action</h2>
+<p class="section-description">Watch our drone autonomously track and follow ArUco markers in real-time</p>
+</div>
+<div class="video-container">
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Project Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+<script>
+window.addEventListener('scroll', function() {
+  const nav = document.querySelector('.nav');
+  if (window.scrollY > 100) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+</script>
 
 
 </div>
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>EECS 106A Project Showcase</h1>
+    </header>
+    <div class="entry-content">
+        Exploring robotics, autonomy, and intelligent systems at UC Berkeley
+    </div>
+    <footer class="entry-footer">
+        <div class="social-icons" >
+</div>
 
-<article class="first-entry"> 
+    </footer>
+</article>
+
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Hello World
+    <h2 class="entry-hint-parent">UR5e Cube Grasp Project
     </h2>
   </header>
   <div class="entry-content">
-    <p>测试文本
-</p>
+    <p> 🤖 UR5e Cube Grasp Robotic Manipulation with Visual Feedback
+📋 Project Overview This project demonstrates autonomous robotic manipulation using the UR5e robotic arm combined with an Intel RealSense D435 depth camera for visual feedback. The system can identify, locate, and grasp colored cubes placed on a tabletop.
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-10-15 00:00:00 +0000 UTC'>October 15, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Hello World" href="https://dongc1.github.io/cosmos-eecs106a.github.io/posts/hello-world/"></a>
+  <footer class="entry-footer"><span title='2024-12-10 00:00:00 +0000 UTC'>December 10, 2024</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>EECS 106A Students</span></footer>
+  <a class="entry-link" aria-label="post link to UR5e Cube Grasp Project" href="https://dongc1.github.io/cosmos-eecs106a.github.io/posts/hello-world/"></a>
 </article>
     </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="https://dongc1.github.io/cosmos-eecs106a.github.io/">EECS 106A Project Showcase</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
+    <footer style="
+  background: #F8F9FA;
+  border-top: 1px solid #E4E6EB;
+  padding: 48px 24px;
+  margin-top: 80px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+">
+  <div style="
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  ">
+    <div style="color: #8A8D91; font-size: 0.875rem;">
+      © 2025 UC Berkeley · EECS 106/206A Final Project
+    </div>
+  </div>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
 </body>
 
 </html>

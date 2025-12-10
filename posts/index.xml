@@ -6,14 +6,14 @@
     <description>Recent content in Posts on EECS 106A Project Showcase</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dongc1.github.io/cosmos-eecs106a.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello World</title>
+      <title>UR5e Cube Grasp Project</title>
       <link>https://dongc1.github.io/cosmos-eecs106a.github.io/posts/hello-world/</link>
-      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://dongc1.github.io/cosmos-eecs106a.github.io/posts/hello-world/</guid>
-      <description>&lt;p&gt;测试文本&lt;/p&gt;</description>
+      <description>A robotic manipulation project using the UR5e arm and Intel RealSense for visual servoing and cube grasping.</description>
     </item>
   </channel>
 </rss>
